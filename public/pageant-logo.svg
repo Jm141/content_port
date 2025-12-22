@@ -1,0 +1,41 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Crown base -->
+  <path d="M100 60L85 90L100 85L115 90L100 60Z" fill="url(#gold1)" stroke="#D4AF37" stroke-width="2"/>
+  <path d="M85 90L70 120L85 115L100 120L85 90Z" fill="url(#gold2)" stroke="#D4AF37" stroke-width="2"/>
+  <path d="M115 90L130 120L115 115L100 120L115 90Z" fill="url(#gold2)" stroke="#D4AF37" stroke-width="2"/>
+  
+  <!-- Side points -->
+  <circle cx="55" cy="100" r="8" fill="url(#gold1)" stroke="#D4AF37" stroke-width="2"/>
+  <circle cx="145" cy="100" r="8" fill="url(#gold1)" stroke="#D4AF37" stroke-width="2"/>
+  
+  <!-- Connecting lines -->
+  <path d="M55 100L70 120M145 100L130 120" stroke="#D4AF37" stroke-width="2" fill="none"/>
+  
+  <!-- Crown band -->
+  <ellipse cx="100" cy="125" rx="50" ry="8" fill="url(#gold3)" stroke="#D4AF37" stroke-width="2"/>
+  
+  <!-- Jewels -->
+  <circle cx="100" cy="75" r="5" fill="#FF1493"/>
+  <circle cx="80" cy="105" r="4" fill="#4169E1"/>
+  <circle cx="120" cy="105" r="4" fill="#FF4500"/>
+  <circle cx="100" cy="120" r="4" fill="#9400D3"/>
+  
+  <!-- Text -->
+  <text x="100" y="160" font-family="serif" font-size="24" font-weight="bold" fill="#D4AF37" text-anchor="middle">PAGEANT</text>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="gold1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFC700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="gold3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+</svg>
