@@ -19,7 +19,7 @@ export function ProjectShowcase() {
           <div className="grid md:grid-cols-2 gap-0">
             <div className="relative aspect-video md:aspect-auto bg-secondary/50">
               <img
-                src="/modern-tech-website-with-blue-teal-gradient-sleek-.jpg"
+                src="/modern-tech-website-with-blue-teal-gradient-sleek-.png"
                 alt="Servio Technologies Website"
                 className="w-full h-full object-cover"
               />
@@ -135,7 +135,7 @@ export function ProjectShowcase() {
           <div className="grid md:grid-cols-2 gap-0">
             <div className="relative aspect-video md:aspect-auto bg-secondary/50">
               <img
-                src="/tes-portal-screenshot.jpg"
+                src="/tes-portal-screenshot.png"
                 alt="TES Application Portal"
                 className="w-full h-full object-cover"
               />
