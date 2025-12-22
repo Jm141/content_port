@@ -58,6 +58,12 @@ export function ProjectShowcase() {
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
+                          {"Professional brochure design with print-ready layouts"}
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
                           {"SMTP integration for contact form with email notifications"}
                         </span>
                       </li>
@@ -81,12 +87,7 @@ export function ProjectShowcase() {
                       Technologies
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">Next.js</Badge>
-                      <Badge variant="secondary">React</Badge>
-                      <Badge variant="secondary">TypeScript</Badge>
-                      <Badge variant="secondary">Tailwind CSS</Badge>
                       <Badge variant="secondary">SMTP</Badge>
-                      <Badge variant="secondary">Responsive Design</Badge>
                     </div>
                   </div>
 
@@ -108,6 +109,23 @@ export function ProjectShowcase() {
                 <p className="text-sm text-muted-foreground leading-relaxed mt-2">
                   <span className="font-semibold text-foreground">Role:</span> Lead Developer & Designer
                 </p>
+              </div>
+
+              {/* Brochure Showcase Section */}
+              <div className="mt-8">
+                <h3 className="text-sm font-semibold mb-4 text-muted-foreground uppercase tracking-wide">
+                  Brochure Design
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="rounded-lg overflow-hidden border border-border">
+                    <img 
+                      src="/brochure.jpg" 
+                      alt="Brochure Front Cover"
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                
+                </div>
               </div>
             </div>
           </div>
