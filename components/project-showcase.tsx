@@ -203,6 +203,7 @@ export function ProjectShowcase() {
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       <Badge variant="secondary">PHP</Badge>
+                      <Badge variant="secondary">Python</Badge>
                       <Badge variant="secondary">MySQL</Badge>
                       <Badge variant="secondary">JavaScript</Badge>
                       <Badge variant="secondary">Bootstrap</Badge>
