@@ -4,9 +4,24 @@ import { Button } from "@/components/ui/button"
 import { ExternalLink, Code2 } from "lucide-react"
 import { ClientLogos } from "@/components/client-logos"
 
+// Add animation styles
+const styles = `
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+`;
+
 export function ProjectShowcase() {
   return (
     <section className="container mx-auto px-6 py-16 max-w-6xl">
+      <style jsx global>{styles}</style>
       <div className="mb-12">
         <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
         <p className="text-muted-foreground text-lg leading-relaxed">
@@ -132,6 +147,10 @@ export function ProjectShowcase() {
           </div>
         </Card>
 
+        {/* Client Logos Carousel */}
+        <ClientLogos />
+
+        {/* TES Application Portal */}
         <Card className="overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
             <div className="relative aspect-video md:aspect-auto bg-secondary/50">
@@ -270,11 +289,6 @@ export function ProjectShowcase() {
             </p>
           </CardContent>
         </Card>
-      </div>
-      
-      {/* Client Logos Carousel */}
-      <div className="mt-20">
-        <ClientLogos />
       </div>
     </section>
   )

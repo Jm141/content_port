@@ -5,11 +5,6 @@ import { useEffect, useState } from 'react';
 export function ClientLogos() {
   const [isMounted, setIsMounted] = useState(false);
   
-  // Base URL for production
-  const baseUrl = process.env.NODE_ENV === 'production' 
-    ? 'https://cp-r416.onrender.com' 
-    : '';
-
   const clients = [
     { id: 1, name: 'Accounitn', logo: '/logos/accounitn.png' },
     { id: 2, name: 'Cloud2', logo: '/logos/cloud2.png' },
@@ -20,39 +15,47 @@ export function ClientLogos() {
 
   useEffect(() => {
     setIsMounted(true);
-    console.log('Base URL:', baseUrl);
-    console.log('Image paths:', clients.map(c => c.logo));
   }, []);
 
   if (!isMounted) {
-    return null;
+    return (
+      <div className="py-12 bg-gradient-to-r from-background to-muted/20">
+        <div className="h-32 animate-pulse rounded-lg bg-muted/30" />
+      </div>
+    );
   }
 
   return (
-    <div className="py-8">
-      <h3 className="text-sm font-semibold mb-6 text-muted-foreground uppercase tracking-wide text-center">
-        Trusted By Industry Leaders
-      </h3>
+    <div className="py-16 bg-gradient-to-r from-background to-muted/10 relative overflow-hidden">
+      {/* Gradient overlays */}
+      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
+      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
       
-      <div className="relative w-full overflow-hidden">
-        <div className="flex animate-marquee whitespace-nowrap">
-          {[...clients, ...clients].map((client, index) => (
-            <div 
-              key={`${client.id}-${index}`} 
-              className="flex-shrink-0 mx-6 w-32 h-24 bg-muted/20 rounded-lg flex items-center justify-center p-2"
-            >
-              <img 
-                src={client.logo}
-                alt={client.name}
-                className="max-h-16 max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity"
-                onError={(e) => {
-                  console.error(`Failed to load: ${client.logo}`);
-                  e.currentTarget.style.display = 'none';
-                }}
-                onLoad={() => console.log(`Loaded: ${client.logo}`)}
-              />
-            </div>
-          ))}
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Trusted by Industry Leaders</h2>
+          <p className="mt-2 text-muted-foreground">Companies we've had the privilege to work with</p>
+        </div>
+        
+        <div className="relative">
+          <div className="flex animate-marquee whitespace-nowrap group">
+            {[...clients, ...clients].map((client, index) => (
+              <div 
+                key={`${client.id}-${index}`} 
+                className="flex-shrink-0 mx-8 w-40 h-28 bg-background rounded-xl shadow-sm border border-border/50 hover:border-primary/50 transition-all duration-300 flex items-center justify-center p-4 group-hover:opacity-80 hover:!opacity-100 hover:shadow-md hover:-translate-y-1"
+              >
+                <img 
+                  src={client.logo}
+                  alt={client.name}
+                  className="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                  onError={(e) => {
+                    console.error(`Failed to load: ${client.logo}`);
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
