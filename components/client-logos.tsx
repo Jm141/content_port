@@ -34,8 +34,8 @@ export function ClientLogos() {
       
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Trusted by Industry Leaders</h2>
-          <p className="mt-2 text-muted-foreground">Companies we've had the privilege to work with</p>
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Logo for Products</h2>
+          <p className="mt-2 text-muted-foreground">Generate logo for Products</p>
         </div>
         
         <div className="relative">
@@ -43,12 +43,12 @@ export function ClientLogos() {
             {[...clients, ...clients].map((client, index) => (
               <div 
                 key={`${client.id}-${index}`} 
-                className="flex-shrink-0 mx-8 w-40 h-28 bg-background rounded-xl shadow-sm border border-border/50 hover:border-primary/50 transition-all duration-300 flex items-center justify-center p-4 group-hover:opacity-80 hover:!opacity-100 hover:shadow-md hover:-translate-y-1"
+                className="flex-shrink-0 mx-8 w-48 h-36 bg-background rounded-xl shadow-sm border border-border/50 hover:border-primary/50 transition-all duration-300 flex items-center justify-center p-6 group-hover:opacity-80 hover:!opacity-100 hover:shadow-md hover:-translate-y-1"
               >
                 <img 
                   src={client.logo}
                   alt={client.name}
-                  className="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                  className="max-h-24 max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
                   onError={(e) => {
                     console.error(`Failed to load: ${client.logo}`);
                     e.currentTarget.style.display = 'none';
