@@ -5,29 +5,27 @@ import { useEffect, useState } from 'react';
 export function ClientLogos() {
   const [isMounted, setIsMounted] = useState(false);
   
-  // Your actual logo files from the public/logos directory
+  // Base URL for production
+  const baseUrl = process.env.NODE_ENV === 'production' 
+    ? 'https://cp-r416.onrender.com' 
+    : '';
+
   const clients = [
-    { id: 1, name: 'Accounitn', logo: '/logos/accounitn.png' },
-    { id: 2, name: 'Cloud2', logo: '/logos/cloud2.png' },
-    { id: 3, name: 'LGU V2', logo: '/logos/lguv23.png' },
-    { id: 4, name: 'Payroll V2', logo: '/logos/payrolv2.png' },
-    { id: 5, name: 'Server AP', logo: '/logos/serverap.png' },
+    { id: 1, name: 'Accounitn', logo: `${baseUrl}/logos/accounitn.png` },
+    { id: 2, name: 'Cloud2', logo: `${baseUrl}/logos/cloud2.png` },
+    { id: 3, name: 'LGU V2', logo: `${baseUrl}/logos/lguv23.png` },
+    { id: 4, name: 'Payroll V2', logo: `${baseUrl}/logos/payrolv2.png` },
+    { id: 5, name: 'Server AP', logo: `${baseUrl}/logos/serverap.png` },
   ];
 
-  // Check if component is mounted (for client-side rendering)
   useEffect(() => {
     setIsMounted(true);
+    console.log('Base URL:', baseUrl);
+    console.log('Image paths:', clients.map(c => c.logo));
   }, []);
 
-  // Log the image paths for debugging
-  useEffect(() => {
-    if (isMounted) {
-      console.log('Available logos:', clients.map(c => c.logo));
-    }
-  }, [isMounted]);
-
   if (!isMounted) {
-    return null; // Don't render on server-side
+    return null;
   }
 
   return (
@@ -48,9 +46,10 @@ export function ClientLogos() {
                 alt={client.name}
                 className="max-h-16 max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity"
                 onError={(e) => {
-                  console.error(`Failed to load image: ${client.logo}`);
+                  console.error(`Failed to load: ${client.logo}`);
                   e.currentTarget.style.display = 'none';
                 }}
+                onLoad={() => console.log(`Loaded: ${client.logo}`)}
               />
             </div>
           ))}
