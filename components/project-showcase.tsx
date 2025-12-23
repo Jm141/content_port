@@ -271,6 +271,11 @@ export function ProjectShowcase() {
           </CardContent>
         </Card>
       </div>
+      
+      {/* Client Logos Carousel */}
+      <div className="mt-20">
+        <ClientLogos />
+      </div>
     </section>
   )
 }

@@ -11,11 +11,11 @@ export function ClientLogos() {
     : '';
 
   const clients = [
-    { id: 1, name: 'Accounitn', logo: `${baseUrl}/logos/accounitn.png` },
-    { id: 2, name: 'Cloud2', logo: `${baseUrl}/logos/cloud2.png` },
-    { id: 3, name: 'LGU V2', logo: `${baseUrl}/logos/lguv23.png` },
-    { id: 4, name: 'Payroll V2', logo: `${baseUrl}/logos/payrolv2.png` },
-    { id: 5, name: 'Server AP', logo: `${baseUrl}/logos/serverap.png` },
+    { id: 1, name: 'Accounitn', logo: '/logos/accounitn.png' },
+    { id: 2, name: 'Cloud2', logo: '/logos/cloud2.png' },
+    { id: 3, name: 'LGU V2', logo: '/logos/lguv23.png' },
+    { id: 4, name: 'Payroll V2', logo: '/logos/payrolv2.png' },
+    { id: 5, name: 'Server AP', logo: '/logos/serverap.png' },
   ];
 
   useEffect(() => {
