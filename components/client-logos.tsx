@@ -34,8 +34,8 @@ export function ClientLogos() {
       
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Logo for Products</h2>
-          <p className="mt-2 text-muted-foreground">Generate logo for Products</p>
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Logos Designed for Products</h2>
+          <p className="mt-2 text-muted-foreground">A collection of logos created for various products.</p>
         </div>
         
         <div className="relative">
