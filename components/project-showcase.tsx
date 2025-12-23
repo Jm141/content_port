@@ -55,12 +55,12 @@ export function ProjectShowcase() {
                           {"Custom image assets designed and integrated throughout the site"}
                         </span>
                       </li>
-                      <li className="flex items-start gap-2">
+                      {/* <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
                           {"Professional brochure design with print-ready layouts"}
                         </span>
-                      </li>
+                      </li> */}
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
