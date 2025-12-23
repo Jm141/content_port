@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Code2 } from "lucide-react"
+import { ClientLogos } from "@/components/client-logos"
 
 export function ProjectShowcase() {
   return (
