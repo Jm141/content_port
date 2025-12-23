@@ -120,7 +120,7 @@ export function ProjectShowcase() {
 
               <div className="mt-8 pt-8 border-t border-border">
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-foreground">Project Duration:</span> 2024 — Present
+                  <span className="font-semibold text-foreground">Project Duration:</span> 2025 — Present
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed mt-2">
                   <span className="font-semibold text-foreground">Role:</span> Lead Developer & Designer
