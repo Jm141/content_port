@@ -7,7 +7,7 @@ export function PortfolioHeader() {
       <div className="container mx-auto px-6 py-8 max-w-6xl">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-3 text-balance">Web Developer</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-3 text-balance"> Julio Martinez | Web Developer</h1>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
               {
                 "I build accessible, pixel-perfect digital experiences for the web with a focus on modern technologies and best practices."
