@@ -1,3 +1,4 @@
+// components/client-logos.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
