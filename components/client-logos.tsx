@@ -1,15 +1,34 @@
 'use client';
 
-import { cn } from "@/lib/utils"
+import { useEffect, useState } from 'react';
 
 export function ClientLogos() {
+  const [isMounted, setIsMounted] = useState(false);
+  
+  // Your actual logo files from the public/logos directory
   const clients = [
-    { id: 1, name: 'Client 1', logo: '/logos/client-1.png' },
-    { id: 2, name: 'Client 2', logo: '/logos/client-2.png' },
-    { id: 3, name: 'Client 3', logo: '/logos/client-3.png' },
-    { id: 4, name: 'Client 4', logo: '/logos/client-4.png' },
-    { id: 5, name: 'Client 5', logo: '/logos/client-5.png' },
-  ]
+    { id: 1, name: 'Accounitn', logo: '/logos/accounitn.png' },
+    { id: 2, name: 'Cloud2', logo: '/logos/cloud2.png' },
+    { id: 3, name: 'LGU V2', logo: '/logos/lguv23.png' },
+    { id: 4, name: 'Payroll V2', logo: '/logos/payrolv2.png' },
+    { id: 5, name: 'Server AP', logo: '/logos/serverap.png' },
+  ];
+
+  // Check if component is mounted (for client-side rendering)
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Log the image paths for debugging
+  useEffect(() => {
+    if (isMounted) {
+      console.log('Available logos:', clients.map(c => c.logo));
+    }
+  }, [isMounted]);
+
+  if (!isMounted) {
+    return null; // Don't render on server-side
+  }
 
   return (
     <div className="py-8">
@@ -28,11 +47,15 @@ export function ClientLogos() {
                 src={client.logo}
                 alt={client.name}
                 className="max-h-16 max-w-full object-contain opacity-90 hover:opacity-100 transition-opacity"
+                onError={(e) => {
+                  console.error(`Failed to load image: ${client.logo}`);
+                  e.currentTarget.style.display = 'none';
+                }}
               />
             </div>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
