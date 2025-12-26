@@ -265,7 +265,6 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
             </div>
           </div>
         </Card>
-      </div>
 
       <div className="mt-16 grid md:grid-cols-3 gap-6">
         <Card>
