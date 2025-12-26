@@ -1,9 +1,12 @@
 'use client';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Code2 } from "lucide-react"
-import { ClientLogos } from "@/components/client-logos"
+
+import * as React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Code2 } from "lucide-react";
+import { ClientLogos } from "@/components/client-logos";
+import { ImageLightbox } from "@/components/image-lightbox";
 
 // Add animation styles
 const styles = `
@@ -19,9 +22,11 @@ const styles = `
   }
 `;
 
-export function ProjectShowcase() {
+interface ProjectShowcaseProps extends React.HTMLAttributes<HTMLDivElement> {}
+
+export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
   return (
-    <section className="container mx-auto px-6 py-16 max-w-6xl">
+    <section className={`container mx-auto px-6 py-16 max-w-6xl ${className || ''}`} {...props}>
       <style jsx global>{styles}</style>
       <div className="mb-12">
         <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
@@ -35,13 +40,15 @@ export function ProjectShowcase() {
         {/* Servio Technologies Project */}
         <Card className="overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
-            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-              <img
-                src="/modern-tech-website-with-blue-teal-gradient-sleek-.png"
-                alt="Servio Technologies Website"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <ImageLightbox src="/modern-tech-website-with-blue-teal-gradient-sleek-.png" alt="Servio Technologies Website">
+              <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+                <img
+                  src="/modern-tech-website-with-blue-teal-gradient-sleek-.png"
+                  alt="Servio Technologies Website"
+                  className="w-full h-full object-cover hover:opacity-90 transition-opacity"
+                />
+              </div>
+            </ImageLightbox>
 
             <div className="flex flex-col justify-between p-8">
               <div>
@@ -155,13 +162,15 @@ export function ProjectShowcase() {
         {/* TES Application Portal */}
         <Card className="overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
-            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-              <img
-                src="/tes-portal-screenshot.png"
-                alt="TES Application Portal"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <ImageLightbox src="/tes-portal-screenshot.png" alt="TES Application Portal">
+              <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+                <img
+                  src="/tes-portal-screenshot.png"
+                  alt="TES Application Portal"
+                  className="w-full h-full object-cover hover:opacity-90 transition-opacity"
+                />
+              </div>
+            </ImageLightbox>
 
             <div className="flex flex-col justify-between p-8">
               <div>
@@ -386,13 +395,15 @@ export function ProjectShowcase() {
         {/* ARUGA for Accounting */}
         <Card className="overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
-            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-              <img
-                src="/accounting.png"
-                alt="ARUGA for Accounting Dashboard"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <ImageLightbox src="/accounting.png" alt="ARUGA for Accounting Dashboard">
+              <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+                <img
+                  src="/accounting.png"
+                  alt="ARUGA for Accounting Dashboard"
+                  className="w-full h-full object-cover hover:opacity-90 transition-opacity"
+                />
+              </div>
+            </ImageLightbox>
 
             <div className="flex flex-col justify-between p-8">
               <div>
@@ -474,13 +485,15 @@ export function ProjectShowcase() {
         {/* ARUGA Payroll */}
         <Card className="overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
-            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-              <img
-                src="/payroll.png"
-                alt="ARUGA Payroll Dashboard"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <ImageLightbox src="/payroll.png" alt="ARUGA Payroll Dashboard">
+              <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+                <img
+                  src="/payroll.png"
+                  alt="ARUGA Payroll Dashboard"
+                  className="w-full h-full object-cover hover:opacity-90 transition-opacity"
+                />
+              </div>
+            </ImageLightbox>
 
             <div className="flex flex-col justify-between p-8">
               <div>
@@ -557,13 +570,15 @@ export function ProjectShowcase() {
         {/* Servio Technologies Project */}
         <Card className="overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
-            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-              <img
-                src="/aruga.png"
-                alt="ARUGA System Overview"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <ImageLightbox src="/aruga.png" alt="ARUGA System Overview">
+              <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+                <img
+                  src="/aruga.png"
+                  alt="ARUGA System Overview"
+                  className="w-full h-full object-cover hover:opacity-90 transition-opacity"
+                />
+              </div>
+            </ImageLightbox>
 
             <div className="flex flex-col justify-between p-8">
               <div>
@@ -728,5 +743,5 @@ export function ProjectShowcase() {
         {/* ARUGA Payroll Project */}
       </div>
     </section>
-  )
+  );
 }
