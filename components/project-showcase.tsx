@@ -329,6 +329,66 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
           </div>
         </Card>
 
+        {/* ARUGA Brand */}
+        <Card className="overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-0">
+            <ImageLightbox src="/aruga.png" alt="ARUGA Brand">
+              <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+                <img
+                  src="/aruga.png"
+                  alt="ARUGA Brand"
+                  className="w-full h-full object-cover hover:opacity-90 transition-opacity"
+                />
+              </div>
+            </ImageLightbox>
+
+            <div className="flex flex-col justify-between p-8">
+              <div>
+                <CardHeader className="p-0 mb-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <CardTitle className="text-2xl">ARUGA</CardTitle>
+                    <div className="text-2xl">🌱</div>
+                  </div>
+                  <CardDescription className="text-base leading-relaxed">
+                    {"Born from the Digital Countryside. ARUGA grew from a single Servio wing—reshaped into a leaf—to remind us that progress must be nurtured, not forced. Because when technology learns to care, communities grow."}
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="p-0 space-y-6">
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Our Products
+                    </h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          <span className="font-medium">ARUGA for Accounting</span> - Complete financial management solution
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          <span className="font-medium">ARUGA Payroll</span> - Comprehensive payroll processing system
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </CardContent>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Project Status:</span> In Development
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                  <span className="font-semibold text-foreground">Role:</span> Full Stack Developer
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
         {/* ARUGA for Accounting */}
         <Card className="overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
