@@ -35,7 +35,8 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
         </p>
       </div>
 
-      <div className="space-y-16">
+      
+
         {/* Servio Technologies Project */}
         <Card className="overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
@@ -61,7 +62,9 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                     </Button>
                   </div>
                   <CardDescription className="text-base leading-relaxed">
-                    {"Complete redesign and development of the corporate website for Servio Technologies, a leading technology services provider."}
+                    {
+                      "Complete redesign and development of the corporate website for Servio Technologies, a leading technology services provider."
+                    }
                   </CardDescription>
                 </CardHeader>
 
@@ -77,6 +80,12 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                           {"Custom image assets designed and integrated throughout the site"}
                         </span>
                       </li>
+                      {/* <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Professional brochure design with print-ready layouts"}
+                        </span>
+                      </li> */}
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
@@ -126,6 +135,23 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                   <span className="font-semibold text-foreground">Role:</span> Lead Developer & Designer
                 </p>
               </div>
+
+              {/* Brochure Showcase Section */}
+              <div className="mt-8">
+                <h3 className="text-sm font-semibold mb-4 text-muted-foreground uppercase tracking-wide">
+                  Brochure Design
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="rounded-lg overflow-hidden border border-border">
+                    <img 
+                      src="/brochure.jpg" 
+                      alt="Brochure Front Cover"
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                
+                </div>
+              </div>
             </div>
           </div>
         </Card>
@@ -163,7 +189,9 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                     </Button>
                   </div>
                   <CardDescription className="text-base leading-relaxed">
-                    {"Developed a comprehensive application portal system for TES, streamlining the application process with secure data management and user authentication."}
+                    {
+                      "Developed a comprehensive application portal system for TES, streamlining the application process with secure data management and user authentication."
+                    }
                   </CardDescription>
                 </CardHeader>
 
@@ -238,28 +266,67 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
           </div>
         </Card>
 
+      <div className="mt-16 grid md:grid-cols-3 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Design & UX</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {"Creating intuitive user experiences with modern design principles and custom visual assets."}
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">Full-Stack Development</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {"Building robust applications with modern frameworks and secure backend systems."}
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-lg">System Integration</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {"Implementing third-party services and custom integrations for enhanced functionality."}
+            </p>
+          </CardContent>
+        </Card>
+
+        <div className="space-y-12">
         {/* Tri-Axis System */}
         <Card className="overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
-            <ImageLightbox src="/tri-axis-showcase.png" alt="Tri-Axis System Website">
-              <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-                <img
-                  src="/tri-axis-showcase.png"
-                  alt="Tri-Axis System Website"
-                  className="w-full h-full object-cover hover:opacity-90 transition-opacity"
-                />
-              </div>
-            </ImageLightbox>
+            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+              <img
+                src="/tri-axis-showcase.png"
+                alt="Tri-Axis System Website"
+                className="w-full h-full object-cover"
+              />
+            </div>
 
             <div className="flex flex-col justify-between p-8">
               <div>
                 <CardHeader className="p-0 mb-6">
                   <div className="flex items-start justify-between mb-3">
                     <CardTitle className="text-2xl">Tri-Axis System</CardTitle>
-                    <div className="text-2xl">🌱</div>
+                    <Button variant="ghost" size="icon" asChild>
+                      <a href="https://triconnect-9xmz.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit website">
+                        <ExternalLink className="h-5 w-5" />
+                      </a>
+                    </Button>
                   </div>
                   <CardDescription className="text-base leading-relaxed">
-                    {"A modern web application for managing and visualizing 3D printing projects with real-time monitoring and control."}
+                    {
+                      "An innovative platform introducing the Tri-Connect system, showcasing AI-generated visualizations and comprehensive system information."
+                    }
                   </CardDescription>
                 </CardHeader>
 
@@ -272,25 +339,19 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
-                          {"3D model viewer with interactive controls"}
+                          {"Showcase of AI-generated visualizations and system diagrams"}
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
-                          {"Real-time print job monitoring and control"}
+                          {"Interactive elements demonstrating the Tri-Connect system capabilities"}
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
-                          {"User authentication and project management"}
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          {"Responsive design for desktop and mobile"}
+                          {"Responsive design for optimal viewing across all devices"}
                         </span>
                       </li>
                     </ul>
@@ -302,16 +363,17 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                     </h3>
                     <div className="flex flex-wrap gap-2">
                       <Badge variant="secondary">React</Badge>
-                      <Badge variant="secondary">Three.js</Badge>
-                      <Badge variant="secondary">Node.js</Badge>
-                      <Badge variant="secondary">MongoDB</Badge>
-                      <Badge variant="secondary">WebSockets</Badge>
+                      <Badge variant="secondary">Tailwind CSS</Badge>
+                      <Badge variant="secondary">Vite</Badge>
                     </div>
                   </div>
 
                   <div className="pt-4">
-                    <Button variant="outline" className="w-full md:w-auto" disabled>
-                      Coming Soon
+                    <Button asChild className="w-full md:w-auto">
+                      <a href="https://triconnect-9xmz.onrender.com/" target="_blank" rel="noopener noreferrer">
+                        View Live Site
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
@@ -319,10 +381,10 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
 
               <div className="mt-8 pt-8 border-t border-border">
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-foreground">Project Status:</span> In Development
+                  <span className="font-semibold text-foreground">Project Duration:</span> 2024 — Present
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                  <span className="font-semibold text-foreground">Role:</span> Full Stack Developer
+                  <span className="font-semibold text-foreground">Role:</span> Frontend Developer
                 </p>
               </div>
             </div>
@@ -350,7 +412,7 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                     <div className="text-2xl">🌱</div>
                   </div>
                   <CardDescription className="text-base leading-relaxed">
-                    {"A smarter way to manage your finances with comprehensive accounting solutions."}
+                    A smarter way to manage your finances with comprehensive accounting solutions.
                   </CardDescription>
                 </CardHeader>
 
@@ -363,25 +425,25 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
-                          {"Automated financial reporting and analytics"}
+                          Comprehensive invoicing and expense tracking
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
-                          {"Invoice and expense tracking"}
+                          Automated financial reports and analytics
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
-                          {"Multi-currency support"}
+                          Payroll management system
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
-                          {"Tax calculation and compliance"}
+                          User-friendly dashboard with real-time insights
                         </span>
                       </li>
                     </ul>
@@ -392,15 +454,14 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                       Technologies
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">React</Badge>
-                      <Badge variant="secondary">TypeScript</Badge>
-                      <Badge variant="secondary">Node.js</Badge>
-                      <Badge variant="secondary">PostgreSQL</Badge>
-                      <Badge variant="secondary">REST API</Badge>
+                      <Badge variant="secondary">Frappe Framework</Badge>
+                      <Badge variant="secondary">Python</Badge>
+                      <Badge variant="secondary">MariaDB</Badge>
+                      <Badge variant="secondary">JavaScript</Badge>
                     </div>
                   </div>
 
-                  <div className="pt-4">
+                  <div className="flex gap-4 pt-4">
                     <Button variant="outline" className="w-full md:w-auto" disabled>
                       Coming Soon
                     </Button>
@@ -441,7 +502,7 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                     <div className="text-2xl">🌱</div>
                   </div>
                   <CardDescription className="text-base leading-relaxed">
-                    {"Payroll made accurate, secure, and stress-free for businesses of all sizes."}
+                    Payroll made accurate, secure, and stress-free for businesses of all sizes.
                   </CardDescription>
                 </CardHeader>
 
@@ -454,25 +515,25 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
-                          {"Automated payroll processing"}
+                          Automated salary computation and tax calculations
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
-                          {"Employee self-service portal"}
+                          Customizable pay structures and deduction rules
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
-                          {"Tax and deduction management"}
+                          Digital payslips and year-end tax documents
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
                         <span className="text-sm leading-relaxed">
-                          {"Compliance with local labor laws"}
+                          Compliance with local labor and tax regulations
                         </span>
                       </li>
                     </ul>
@@ -483,15 +544,14 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                       Technologies
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">Vue.js</Badge>
-                      <Badge variant="secondary">TypeScript</Badge>
-                      <Badge variant="secondary">NestJS</Badge>
-                      <Badge variant="secondary">MongoDB</Badge>
-                      <Badge variant="secondary">GraphQL</Badge>
+                      <Badge variant="secondary">Frappe Framework</Badge>
+                      <Badge variant="secondary">Python</Badge>
+                      <Badge variant="secondary">MariaDB</Badge>
+                      <Badge variant="secondary">JavaScript</Badge>
                     </div>
                   </div>
 
-                  <div className="pt-4">
+                  <div className="flex gap-4 pt-4">
                     <Button variant="outline" className="w-full md:w-auto" disabled>
                       Coming Soon
                     </Button>
@@ -504,48 +564,184 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                   <span className="font-semibold text-foreground">Project Status:</span> In Development
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                  <span className="font-semibold text-foreground">Role:</span> Full Stack Developer
+                  <span className="font-semibold text-foreground">Role:</span> Website Designer
+                </p>
+        {/* Servio Technologies Project */}
+        <Card className="overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-0">
+            <ImageLightbox src="/aruga.png" alt="ARUGA System Overview">
+              <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+                <img
+                  src="/aruga.png"
+                  alt="ARUGA System Overview"
+                  className="w-full h-full object-cover hover:opacity-90 transition-opacity"
+                />
+              </div>
+            </ImageLightbox>
+
+            <div className="flex flex-col justify-between p-8">
+              <div>
+                <CardHeader className="p-0 mb-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <CardTitle className="text-2xl">ARUGA</CardTitle>
+                    <div className="text-2xl">�</div>
+                  </div>
+                  <CardDescription className="text-base leading-relaxed space-y-2">
+                    <p>Born from the Digital Countryside</p>
+                    <p className="italic">
+                      Aruga grew from a single Servio wing—reshaped into a leaf—to remind us that progress must be nurtured, not forced.
+                    </p>
+                    <p>Because when technology learns to care, communities grow.</p>
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="p-0 space-y-6">
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide mt-6">
+                      Our Products
+                    </h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          <span className="font-medium">ARUGA Accounting</span> - Complete financial management solution
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          <span className="font-medium">ARUGA Payroll</span> - Comprehensive payroll processing system
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Built With
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary">Frappe Framework</Badge>
+                      <Badge variant="secondary">Python</Badge>
+                      <Badge variant="secondary">MariaDB</Badge>
+                      <Badge variant="secondary">JavaScript</Badge>
+                    </div>
+                  </div> */}
+
+                  <div className="flex gap-4 pt-4">
+                    <Button variant="outline" className="w-full md:w-auto" disabled>
+                      Explore ARUGA
+                    </Button>
+                  </div>
+                </CardContent>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Project Status:</span> In Development
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                  <span className="font-semibold text-foreground">Role:</span> Website Designer
                 </p>
               </div>
             </div>
           </div>
         </Card>
 
-        <div className="mt-16 grid md:grid-cols-3 gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">Design & UX</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {"Creating intuitive user experiences with modern design principles and custom visual assets."}
-              </p>
-            </CardContent>
-          </Card>
+        {/* Tri-Axis Project */}
+        <Card className="overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+              <img
+                src="/tri-axis-showcase.png"
+                alt="Tri-Axis System Website"
+                className="w-full h-full object-cover"
+              />
+            </div>
 
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">Full-Stack Development</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {"Building robust applications with modern frameworks and secure backend systems."}
-              </p>
-            </CardContent>
-          </Card>
+            <div className="flex flex-col justify-between p-8">
+              <div>
+                <CardHeader className="p-0 mb-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <CardTitle className="text-2xl">Tri-Axis System</CardTitle>
+                    <Button variant="ghost" size="icon" asChild>
+                      <a href="https://triconnect-9xmz.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit website">
+                        <ExternalLink className="h-5 w-5" />
+                      </a>
+                    </Button>
+                  </div>
+                  <CardDescription className="text-base leading-relaxed">
+                    {
+                      "An innovative platform introducing the Tri-Connect system, showcasing AI-generated visualizations and comprehensive system information."
+                    }
+                  </CardDescription>
+                </CardHeader>
 
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">System Integration</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {"Implementing third-party services and custom integrations for enhanced functionality."}
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+                <CardContent className="p-0 space-y-6">
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Key Features
+                    </h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Showcase of AI-generated visualizations and system diagrams"}
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Interactive elements demonstrating the Tri-Connect system capabilities"}
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Responsive design for optimal viewing across all devices"}
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Technologies
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary">React</Badge>
+                      <Badge variant="secondary">Tailwind CSS</Badge>
+                      <Badge variant="secondary">Vite</Badge>
+                    </div>
+                  </div>
+
+                  <div className="pt-4">
+                    <Button asChild className="w-full md:w-auto">
+                      <a href="https://triconnect-9xmz.onrender.com/" target="_blank" rel="noopener noreferrer">
+                        View Live Site
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Project Duration:</span> 2024 — Present
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                  <span className="font-semibold text-foreground">Role:</span> Frontend Developer
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* ARUGA for Accounting Project */}
+        {/* ARUGA Payroll Project */}
       </div>
     </section>
   );
 }
+
