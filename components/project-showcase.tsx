@@ -301,11 +301,11 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                       Technologies
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">React</Badge>
-                      <Badge variant="secondary">Three.js</Badge>
-                      <Badge variant="secondary">Node.js</Badge>
-                      <Badge variant="secondary">MongoDB</Badge>
-                      <Badge variant="secondary">WebSockets</Badge>
+                      <Badge variant="secondary">PHP</Badge>
+                      <Badge variant="secondary">FLutter</Badge>
+                      <Badge variant="secondary">MySQL</Badge>
+                      <Badge variant="secondary">RestAPI</Badge>
+                      <Badge variant="secondary">JWT</Badge>
                     </div>
                   </div>
 
@@ -377,14 +377,14 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                 </CardContent>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-border">
+              {/* <div className="mt-8 pt-8 border-t border-border">
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   <span className="font-semibold text-foreground">Project Status:</span> In Development
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed mt-2">
                   <span className="font-semibold text-foreground">Role:</span> Full Stack Developer
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </Card>
@@ -473,7 +473,7 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                   <span className="font-semibold text-foreground">Project Status:</span> In Development
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                  <span className="font-semibold text-foreground">Role:</span> Full Stack Developer
+                  <span className="font-semibold text-foreground">Role:</span> Website Designer
                 </p>
               </div>
             </div>
@@ -564,7 +564,7 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                   <span className="font-semibold text-foreground">Project Status:</span> In Development
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                  <span className="font-semibold text-foreground">Role:</span> Full Stack Developer
+                  <span className="font-semibold text-foreground">Role:</span> Website Designer
                 </p>
               </div>
             </div>
