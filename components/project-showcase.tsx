@@ -31,6 +31,96 @@ export function ProjectShowcase() {
       </div>
 
       <div className="space-y-12">
+        {/* Tri-Axis Project */}
+        <Card className="overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+              <img
+                src="/tri-axis-showcase.png"
+                alt="Tri-Axis System Website"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="flex flex-col justify-between p-8">
+              <div>
+                <CardHeader className="p-0 mb-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <CardTitle className="text-2xl">Tri-Axis System</CardTitle>
+                    <Button variant="ghost" size="icon" asChild>
+                      <a href="https://triconnect-9xmz.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit website">
+                        <ExternalLink className="h-5 w-5" />
+                      </a>
+                    </Button>
+                  </div>
+                  <CardDescription className="text-base leading-relaxed">
+                    {
+                      "An innovative platform introducing the Tri-Connect system, showcasing AI-generated visualizations and comprehensive system information."
+                    }
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="p-0 space-y-6">
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Key Features
+                    </h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Showcase of AI-generated visualizations and system diagrams"}
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Interactive elements demonstrating the Tri-Connect system capabilities"}
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Responsive design for optimal viewing across all devices"}
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Technologies
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary">React</Badge>
+                      <Badge variant="secondary">Tailwind CSS</Badge>
+                      <Badge variant="secondary">Vite</Badge>
+                    </div>
+                  </div>
+
+                  <div className="pt-4">
+                    <Button asChild className="w-full md:w-auto">
+                      <a href="https://triconnect-9xmz.onrender.com/" target="_blank" rel="noopener noreferrer">
+                        View Live Site
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Project Duration:</span> 2024 — Present
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                  <span className="font-semibold text-foreground">Role:</span> Frontend Developer
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
         {/* Servio Technologies Project */}
         <Card className="overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
