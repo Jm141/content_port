@@ -30,352 +30,7 @@ export function ProjectShowcase() {
         </p>
       </div>
 
-      <div className="space-y-12">
-        {/* ARUGA Infographic */}
-        <Card className="overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-0">
-            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-              <img
-                src="/aruga.png"
-                alt="ARUGA System Overview"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="flex flex-col justify-between p-8">
-              <div>
-                <CardHeader className="p-0 mb-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <CardTitle className="text-2xl">ARUGA</CardTitle>
-                    <div className="text-2xl">�</div>
-                  </div>
-                  <CardDescription className="text-base leading-relaxed space-y-2">
-                    <p>Born from the Digital Countryside</p>
-                    <p className="italic">
-                      Aruga grew from a single Servio wing—reshaped into a leaf—to remind us that progress must be nurtured, not forced.
-                    </p>
-                    <p>Because when technology learns to care, communities grow.</p>
-                  </CardDescription>
-                </CardHeader>
-
-                <CardContent className="p-0 space-y-6">
-                  <div>
-                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide mt-6">
-                      Our Products
-                    </h3>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          <span className="font-medium">ARUGA Accounting</span> - Complete financial management solution
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          <span className="font-medium">ARUGA Payroll</span> - Comprehensive payroll processing system
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* <div>
-                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
-                      Built With
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">Frappe Framework</Badge>
-                      <Badge variant="secondary">Python</Badge>
-                      <Badge variant="secondary">MariaDB</Badge>
-                      <Badge variant="secondary">JavaScript</Badge>
-                    </div>
-                  </div> */}
-
-                  <div className="flex gap-4 pt-4">
-                    <Button variant="outline" className="w-full md:w-auto" disabled>
-                      Explore ARUGA
-                    </Button>
-                  </div>
-                </CardContent>
-              </div>
-
-              <div className="mt-8 pt-8 border-t border-border">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-foreground">Project Status:</span> In Development
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                  <span className="font-semibold text-foreground">Role:</span> Website Designer
-                </p>
-              </div>
-            </div>
-          </div>
-        </Card>
-
-        {/* Tri-Axis Project */}
-        <Card className="overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-0">
-            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-              <img
-                src="/tri-axis-showcase.png"
-                alt="Tri-Axis System Website"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="flex flex-col justify-between p-8">
-              <div>
-                <CardHeader className="p-0 mb-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <CardTitle className="text-2xl">Tri-Axis System</CardTitle>
-                    <Button variant="ghost" size="icon" asChild>
-                      <a href="https://triconnect-9xmz.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit website">
-                        <ExternalLink className="h-5 w-5" />
-                      </a>
-                    </Button>
-                  </div>
-                  <CardDescription className="text-base leading-relaxed">
-                    {
-                      "An innovative platform introducing the Tri-Connect system, showcasing AI-generated visualizations and comprehensive system information."
-                    }
-                  </CardDescription>
-                </CardHeader>
-
-                <CardContent className="p-0 space-y-6">
-                  <div>
-                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
-                      Key Features
-                    </h3>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          {"Showcase of AI-generated visualizations and system diagrams"}
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          {"Interactive elements demonstrating the Tri-Connect system capabilities"}
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          {"Responsive design for optimal viewing across all devices"}
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
-                      Technologies
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">React</Badge>
-                      <Badge variant="secondary">Tailwind CSS</Badge>
-                      <Badge variant="secondary">Vite</Badge>
-                    </div>
-                  </div>
-
-                  <div className="pt-4">
-                    <Button asChild className="w-full md:w-auto">
-                      <a href="https://triconnect-9xmz.onrender.com/" target="_blank" rel="noopener noreferrer">
-                        View Live Site
-                        <ExternalLink className="ml-2 h-4 w-4" />
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </div>
-
-              <div className="mt-8 pt-8 border-t border-border">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-foreground">Project Duration:</span> 2024 — Present
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                  <span className="font-semibold text-foreground">Role:</span> Frontend Developer
-                </p>
-              </div>
-            </div>
-          </div>
-        </Card>
-
-        {/* ARUGA for Accounting Project */}
-        <Card className="overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-0">
-            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-              <img
-                src="/accounting.png"
-                alt="ARUGA for Accounting Dashboard"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="flex flex-col justify-between p-8">
-              <div>
-                <CardHeader className="p-0 mb-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <CardTitle className="text-2xl">ARUGA for Accounting</CardTitle>
-                    <div className="text-2xl">🌱</div>
-                  </div>
-                  <CardDescription className="text-base leading-relaxed">
-                    A smarter way to manage your finances with comprehensive accounting solutions.
-                  </CardDescription>
-                </CardHeader>
-
-                <CardContent className="p-0 space-y-6">
-                  <div>
-                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
-                      Key Features
-                    </h3>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          Comprehensive invoicing and expense tracking
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          Automated financial reports and analytics
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          Payroll management system
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          User-friendly dashboard with real-time insights
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
-                      Technologies
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">Frappe Framework</Badge>
-                      <Badge variant="secondary">Python</Badge>
-                      <Badge variant="secondary">MariaDB</Badge>
-                      <Badge variant="secondary">JavaScript</Badge>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4 pt-4">
-                    <Button variant="outline" className="w-full md:w-auto" disabled>
-                      Coming Soon
-                    </Button>
-                  </div>
-                </CardContent>
-              </div>
-
-              <div className="mt-8 pt-8 border-t border-border">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-foreground">Project Status:</span> In Development
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                  <span className="font-semibold text-foreground">Role:</span> Full Stack Developer
-                </p>
-              </div>
-            </div>
-          </div>
-        </Card>
-
-        {/* ARUGA Payroll Project */}
-        <Card className="overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-0">
-            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-              <img
-                src="/payroll.png"
-                alt="ARUGA Payroll Dashboard"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="flex flex-col justify-between p-8">
-              <div>
-                <CardHeader className="p-0 mb-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <CardTitle className="text-2xl">ARUGA Payroll</CardTitle>
-                    <div className="text-2xl">🌱</div>
-                  </div>
-                  <CardDescription className="text-base leading-relaxed">
-                    Payroll made accurate, secure, and stress-free for businesses of all sizes.
-                  </CardDescription>
-                </CardHeader>
-
-                <CardContent className="p-0 space-y-6">
-                  <div>
-                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
-                      Key Features
-                    </h3>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          Automated salary computation and tax calculations
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          Customizable pay structures and deduction rules
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          Digital payslips and year-end tax documents
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
-                        <span className="text-sm leading-relaxed">
-                          Compliance with local labor and tax regulations
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
-                      Technologies
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="secondary">Frappe Framework</Badge>
-                      <Badge variant="secondary">Python</Badge>
-                      <Badge variant="secondary">MariaDB</Badge>
-                      <Badge variant="secondary">JavaScript</Badge>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4 pt-4">
-                    <Button variant="outline" className="w-full md:w-auto" disabled>
-                      Coming Soon
-                    </Button>
-                  </div>
-                </CardContent>
-              </div>
-
-              <div className="mt-8 pt-8 border-t border-border">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-foreground">Project Status:</span> In Development
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                  <span className="font-semibold text-foreground">Role:</span> Full Stack Developer
-                </p>
-              </div>
-            </div>
-          </div>
-        </Card>
+      
 
         {/* Servio Technologies Project */}
         <Card className="overflow-hidden">
@@ -636,6 +291,441 @@ export function ProjectShowcase() {
             </p>
           </CardContent>
         </Card>
+
+        <div className="space-y-12">
+        {/* Tri-Axis System */}
+        <Card className="overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+              <img
+                src="/tri-axis-showcase.png"
+                alt="Tri-Axis System Website"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="flex flex-col justify-between p-8">
+              <div>
+                <CardHeader className="p-0 mb-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <CardTitle className="text-2xl">Tri-Axis System</CardTitle>
+                    <Button variant="ghost" size="icon" asChild>
+                      <a href="https://triconnect-9xmz.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit website">
+                        <ExternalLink className="h-5 w-5" />
+                      </a>
+                    </Button>
+                  </div>
+                  <CardDescription className="text-base leading-relaxed">
+                    {
+                      "An innovative platform introducing the Tri-Connect system, showcasing AI-generated visualizations and comprehensive system information."
+                    }
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="p-0 space-y-6">
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Key Features
+                    </h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Showcase of AI-generated visualizations and system diagrams"}
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Interactive elements demonstrating the Tri-Connect system capabilities"}
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Responsive design for optimal viewing across all devices"}
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Technologies
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary">React</Badge>
+                      <Badge variant="secondary">Tailwind CSS</Badge>
+                      <Badge variant="secondary">Vite</Badge>
+                    </div>
+                  </div>
+
+                  <div className="pt-4">
+                    <Button asChild className="w-full md:w-auto">
+                      <a href="https://triconnect-9xmz.onrender.com/" target="_blank" rel="noopener noreferrer">
+                        View Live Site
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Project Duration:</span> 2024 — Present
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                  <span className="font-semibold text-foreground">Role:</span> Frontend Developer
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* ARUGA for Accounting */}
+        <Card className="overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+              <img
+                src="/accounting.png"
+                alt="ARUGA for Accounting Dashboard"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="flex flex-col justify-between p-8">
+              <div>
+                <CardHeader className="p-0 mb-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <CardTitle className="text-2xl">ARUGA for Accounting</CardTitle>
+                    <div className="text-2xl">🌱</div>
+                  </div>
+                  <CardDescription className="text-base leading-relaxed">
+                    A smarter way to manage your finances with comprehensive accounting solutions.
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="p-0 space-y-6">
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Key Features
+                    </h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          Comprehensive invoicing and expense tracking
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          Automated financial reports and analytics
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          Payroll management system
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          User-friendly dashboard with real-time insights
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Technologies
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary">Frappe Framework</Badge>
+                      <Badge variant="secondary">Python</Badge>
+                      <Badge variant="secondary">MariaDB</Badge>
+                      <Badge variant="secondary">JavaScript</Badge>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 pt-4">
+                    <Button variant="outline" className="w-full md:w-auto" disabled>
+                      Coming Soon
+                    </Button>
+                  </div>
+                </CardContent>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Project Status:</span> In Development
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                  <span className="font-semibold text-foreground">Role:</span> Full Stack Developer
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* ARUGA Payroll */}
+        <Card className="overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+              <img
+                src="/payroll.png"
+                alt="ARUGA Payroll Dashboard"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="flex flex-col justify-between p-8">
+              <div>
+                <CardHeader className="p-0 mb-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <CardTitle className="text-2xl">ARUGA Payroll</CardTitle>
+                    <div className="text-2xl">🌱</div>
+                  </div>
+                  <CardDescription className="text-base leading-relaxed">
+                    Payroll made accurate, secure, and stress-free for businesses of all sizes.
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="p-0 space-y-6">
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Key Features
+                    </h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          Automated salary computation and tax calculations
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          Customizable pay structures and deduction rules
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          Digital payslips and year-end tax documents
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          Compliance with local labor and tax regulations
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Technologies
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary">Frappe Framework</Badge>
+                      <Badge variant="secondary">Python</Badge>
+                      <Badge variant="secondary">MariaDB</Badge>
+                      <Badge variant="secondary">JavaScript</Badge>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 pt-4">
+                    <Button variant="outline" className="w-full md:w-auto" disabled>
+                      Coming Soon
+                    </Button>
+                  </div>
+                </CardContent>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Project Status:</span> In Development
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                  <span className="font-semibold text-foreground">Role:</span> Website Designer
+                </p>
+        {/* Servio Technologies Project */}
+        <Card className="overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+              <img
+                src="/aruga.png"
+                alt="ARUGA System Overview"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="flex flex-col justify-between p-8">
+              <div>
+                <CardHeader className="p-0 mb-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <CardTitle className="text-2xl">ARUGA</CardTitle>
+                    <div className="text-2xl">�</div>
+                  </div>
+                  <CardDescription className="text-base leading-relaxed space-y-2">
+                    <p>Born from the Digital Countryside</p>
+                    <p className="italic">
+                      Aruga grew from a single Servio wing—reshaped into a leaf—to remind us that progress must be nurtured, not forced.
+                    </p>
+                    <p>Because when technology learns to care, communities grow.</p>
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="p-0 space-y-6">
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide mt-6">
+                      Our Products
+                    </h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          <span className="font-medium">ARUGA Accounting</span> - Complete financial management solution
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          <span className="font-medium">ARUGA Payroll</span> - Comprehensive payroll processing system
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Built With
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary">Frappe Framework</Badge>
+                      <Badge variant="secondary">Python</Badge>
+                      <Badge variant="secondary">MariaDB</Badge>
+                      <Badge variant="secondary">JavaScript</Badge>
+                    </div>
+                  </div> */}
+
+                  <div className="flex gap-4 pt-4">
+                    <Button variant="outline" className="w-full md:w-auto" disabled>
+                      Explore ARUGA
+                    </Button>
+                  </div>
+                </CardContent>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Project Status:</span> In Development
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                  <span className="font-semibold text-foreground">Role:</span> Website Designer
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* Tri-Axis Project */}
+        <Card className="overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="relative aspect-video md:aspect-auto bg-secondary/50">
+              <img
+                src="/tri-axis-showcase.png"
+                alt="Tri-Axis System Website"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="flex flex-col justify-between p-8">
+              <div>
+                <CardHeader className="p-0 mb-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <CardTitle className="text-2xl">Tri-Axis System</CardTitle>
+                    <Button variant="ghost" size="icon" asChild>
+                      <a href="https://triconnect-9xmz.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit website">
+                        <ExternalLink className="h-5 w-5" />
+                      </a>
+                    </Button>
+                  </div>
+                  <CardDescription className="text-base leading-relaxed">
+                    {
+                      "An innovative platform introducing the Tri-Connect system, showcasing AI-generated visualizations and comprehensive system information."
+                    }
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="p-0 space-y-6">
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Key Features
+                    </h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Showcase of AI-generated visualizations and system diagrams"}
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Interactive elements demonstrating the Tri-Connect system capabilities"}
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Code2 className="h-4 w-4 mt-1 text-primary shrink-0" />
+                        <span className="text-sm leading-relaxed">
+                          {"Responsive design for optimal viewing across all devices"}
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
+                      Technologies
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary">React</Badge>
+                      <Badge variant="secondary">Tailwind CSS</Badge>
+                      <Badge variant="secondary">Vite</Badge>
+                    </div>
+                  </div>
+
+                  <div className="pt-4">
+                    <Button asChild className="w-full md:w-auto">
+                      <a href="https://triconnect-9xmz.onrender.com/" target="_blank" rel="noopener noreferrer">
+                        View Live Site
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">Project Duration:</span> 2024 — Present
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
+                  <span className="font-semibold text-foreground">Role:</span> Frontend Developer
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* ARUGA for Accounting Project */}
+        {/* ARUGA Payroll Project */}
       </div>
     </section>
   )
