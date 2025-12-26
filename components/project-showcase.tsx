@@ -1,26 +1,52 @@
 'use client';
 
 import * as React from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Code2 } from "lucide-react";
 import { ClientLogos } from "@/components/client-logos";
 import { ImageLightbox } from "@/components/image-lightbox";
+import { Parallax } from "@/components/ui/parallax";
 
-// Add animation styles
-const styles = `
-  @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  .animate-marquee {
-    animation: marquee 30s linear infinite;
-  }
-  .animate-marquee:hover {
-    animation-play-state: paused;
-  }
-`;
+// Animation variants
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
 
 interface ProjectShowcaseProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -28,26 +54,54 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
   return (
     <section className={`container mx-auto px-6 py-16 max-w-6xl ${className || ''}`} {...props}>
       <style jsx global>{styles}</style>
-      <div className="mb-12">
+      <motion.div 
+        className="mb-12"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={fadeIn}
+      >
         <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
-        <p className="text-muted-foreground text-lg leading-relaxed">
+        <motion.p 
+          className="text-muted-foreground text-lg leading-relaxed"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
           {"Recent work showcasing modern web development practices and technical expertise"}
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
-      <div className="space-y-16">
+      <motion.div 
+        className="space-y-16"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         {/* Servio Technologies Project */}
-        <Card className="overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-0">
-            <ImageLightbox src="/modern-tech-website-with-blue-teal-gradient-sleek-.png" alt="Servio Technologies Website">
-              <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-                <img
-                  src="/modern-tech-website-with-blue-teal-gradient-sleek-.png"
-                  alt="Servio Technologies Website"
-                  className="w-full h-full object-cover hover:opacity-90 transition-opacity"
-                />
+        <motion.div variants={item}>
+          <Card className="overflow-hidden group hover:shadow-lg transition-shadow duration-300">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="relative overflow-hidden">
+                <Parallax offset={30}>
+                  <ImageLightbox src="/modern-tech-website-with-blue-teal-gradient-sleek-.png" alt="Servio Technologies Website">
+                    <div className="relative aspect-video md:aspect-auto bg-secondary/50 overflow-hidden">
+                      <motion.div
+                        className="w-full h-full"
+                        whileHover={{ scale: 1.03 }}
+                        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                      >
+                        <img
+                          src="/modern-tech-website-with-blue-teal-gradient-sleek-.png"
+                          alt="Servio Technologies Website"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </motion.div>
+                    </div>
+                  </ImageLightbox>
+                </Parallax>
               </div>
-            </ImageLightbox>
 
             <div className="flex flex-col justify-between p-8">
               <div>
@@ -129,22 +183,36 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
             </div>
           </div>
         </Card>
+        </motion.div>
 
         {/* Client Logos Carousel */}
-        <ClientLogos />
+        <motion.div variants={item} className="py-8">
+          <ClientLogos />
+        </motion.div>
 
         {/* TES Application Portal */}
-        <Card className="overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-0">
-            <ImageLightbox src="/tes-portal-screenshot.png" alt="TES Application Portal">
-              <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-                <img
-                  src="/tes-portal-screenshot.png"
-                  alt="TES Application Portal"
-                  className="w-full h-full object-cover hover:opacity-90 transition-opacity"
-                />
+        <motion.div variants={item}>
+          <Card className="overflow-hidden group hover:shadow-lg transition-shadow duration-300">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="relative overflow-hidden">
+                <Parallax offset={30}>
+                  <ImageLightbox src="/tes-portal-screenshot.png" alt="TES Application Portal">
+                    <div className="relative aspect-video md:aspect-auto bg-secondary/50 overflow-hidden">
+                      <motion.div
+                        className="w-full h-full"
+                        whileHover={{ scale: 1.03 }}
+                        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                      >
+                        <img
+                          src="/tes-portal-screenshot.png"
+                          alt="TES Application Portal"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </motion.div>
+                    </div>
+                  </ImageLightbox>
+                </Parallax>
               </div>
-            </ImageLightbox>
 
             <div className="flex flex-col justify-between p-8">
               <div>
@@ -237,19 +305,31 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
             </div>
           </div>
         </Card>
+        </motion.div>
 
         {/* Tri-Axis System */}
-        <Card className="overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-0">
-            <ImageLightbox src="/tri-axis-showcase.png" alt="Tri-Axis System Website">
-              <div className="relative aspect-video md:aspect-auto bg-secondary/50">
-                <img
-                  src="/tri-axis-showcase.png"
-                  alt="Tri-Axis System Website"
-                  className="w-full h-full object-cover hover:opacity-90 transition-opacity"
-                />
+        <motion.div variants={item}>
+          <Card className="overflow-hidden group hover:shadow-lg transition-shadow duration-300">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="relative overflow-hidden">
+                <Parallax offset={30}>
+                  <ImageLightbox src="/tri-axis-showcase.png" alt="Tri-Axis System Website">
+                    <div className="relative aspect-video md:aspect-auto bg-secondary/50 overflow-hidden">
+                      <motion.div
+                        className="w-full h-full"
+                        whileHover={{ scale: 1.03 }}
+                        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                      >
+                        <img
+                          src="/tri-axis-showcase.png"
+                          alt="Tri-Axis System Website"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </motion.div>
+                    </div>
+                  </ImageLightbox>
+                </Parallax>
               </div>
-            </ImageLightbox>
 
             <div className="flex flex-col justify-between p-8">
               <div>
@@ -605,7 +685,8 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
             </CardContent>
           </Card>
         </div>
+      </motion.div>
       </div>
-    </section>
-  );
-}
+    </motion.div>
+  </div>
+</section>
