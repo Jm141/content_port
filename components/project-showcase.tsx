@@ -683,6 +683,12 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
           </Card>
         </div>
       </motion.div>
+
+      <div className="mt-16 pt-8 border-t border-border">
+        <p className="text-sm text-muted-foreground text-center">
+          All images displayed are AI-generated for demonstration purposes.
+        </p>
+      </div>
     </section>
   );
 }
