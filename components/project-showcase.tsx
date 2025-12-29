@@ -686,7 +686,4 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
           </Card>
         </div>
       </motion.div>
-      </div>
-    </motion.div>
-  </div>
-</section>
+    </section>
