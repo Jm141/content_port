@@ -53,7 +53,6 @@ interface ProjectShowcaseProps extends React.HTMLAttributes<HTMLDivElement> {}
 export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
   return (
     <section className={`container mx-auto px-6 py-16 max-w-6xl ${className || ''}`} {...props}>
-      <style jsx global>{styles}</style>
       <motion.div 
         className="mb-12"
         initial="hidden"
