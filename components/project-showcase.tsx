@@ -521,17 +521,10 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                       </ul>
                     </div>
 
-                    <div>
-                      <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
-                        Technologies
-                      </h3>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge variant="secondary">React</Badge>
-                        <Badge variant="secondary">TypeScript</Badge>
-                        <Badge variant="secondary">Node.js</Badge>
-                        <Badge variant="secondary">PostgreSQL</Badge>
-                        <Badge variant="secondary">REST API</Badge>
-                      </div>
+                    <div className="pt-4">
+                      <p className="text-xs text-muted-foreground italic">
+                        Note: The infographic displayed is AI-generated for demonstration purposes.
+                      </p>
                     </div>
 
                     <div className="pt-4">
@@ -614,17 +607,10 @@ export function ProjectShowcase({ className, ...props }: ProjectShowcaseProps) {
                       </ul>
                     </div>
 
-                    <div>
-                      <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
-                        Technologies
-                      </h3>
-                      <div className="flex flex-wrap gap-2">
-                        <Badge variant="secondary">Vue.js</Badge>
-                        <Badge variant="secondary">TypeScript</Badge>
-                        <Badge variant="secondary">NestJS</Badge>
-                        <Badge variant="secondary">MongoDB</Badge>
-                        <Badge variant="secondary">GraphQL</Badge>
-                      </div>
+                    <div className="pt-4">
+                      <p className="text-xs text-muted-foreground italic">
+                        Note: The infographic displayed is AI-generated for demonstration purposes.
+                      </p>
                     </div>
 
                     <div className="pt-4">
